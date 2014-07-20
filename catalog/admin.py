@@ -9,6 +9,8 @@ from django.contrib.auth.models import User, Group
 class CategoryBlockAdmin(admin.ModelAdmin):
     form = CategoryBlockAdminForm
     list_display = ('title', 'form_type', 'move_list', 'is_active')
+    list_filter = ('is_active', 'form_type')
+    # search_fields = ('title',)
 
     def move_list(self, obj):
         move_list = obj.move_type.all()
@@ -29,6 +31,8 @@ class CategoryAdmin(admin.ModelAdmin):
     form = CategoryAdminForm
     list_display = ('title', 'block', 'is_active')
     ordering = ('title',)
+    list_filter = ('is_active', 'block')
+    # search_fields = ('title',)
 
     inlines = [
         PriceInline
