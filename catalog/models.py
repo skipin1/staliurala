@@ -3,6 +3,7 @@
 from django.db import models
 from autoslug import AutoSlugField
 from model_utils.models import TimeStampedModel
+from django.core.urlresolvers import reverse
 
 
 class CommonFields(TimeStampedModel):
@@ -49,6 +50,10 @@ class CategoryBlock(CommonFields):
 class Category(CommonFields):
     block = models.ForeignKey(CategoryBlock, verbose_name=u'Блок', related_name='categories')
     image = models.ImageField(u'Картинка', upload_to='catalog/category/', blank=True)
+    slug = AutoSlugField(populate_from='title')
+
+    def get_absolute_url(self):
+        return reverse('catalog:category', args=[self.slug])
 
     class Meta():
         verbose_name = u'Категория'
