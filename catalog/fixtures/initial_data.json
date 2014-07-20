@@ -1,0 +1,30 @@
+[
+    {
+        "pk": 1,
+        "model": "catalog.movetype",
+        "fields": {
+            "type": "double-to-left"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "catalog.movetype",
+        "fields": {
+            "type": "double-to-right"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "catalog.movetype",
+        "fields": {
+            "type": "double-to-top"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "catalog.movetype",
+        "fields": {
+            "type": "double-to-bottom"
+        }
+    }
+]
