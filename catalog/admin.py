@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from .models import CategoryBlock, Category, Product
-from .forms import CategoryBlockAdminForm, CategoryAdminForm, ProductAdminForm
+from .models import CategoryBlock, Category, Price
+from .forms import CategoryBlockAdminForm, CategoryAdminForm
 from django.contrib.auth.models import User, Group
 
 
@@ -19,19 +19,30 @@ class CategoryBlockAdmin(admin.ModelAdmin):
     move_list.short_description = u'Увеличение блока'
 
 
+class PriceInline(admin.TabularInline):
+    model = Price
+    extra = 0
+    fields = ('title', 'url', 'is_active')
+
+
 class CategoryAdmin(admin.ModelAdmin):
     form = CategoryAdminForm
-    list_display = ('title',)
+    list_display = ('title', 'block', 'is_active')
+    ordering = ('title',)
+
+    inlines = [
+        PriceInline
+    ]
 
 
-class ProductAdmin(admin.ModelAdmin):
-    form = ProductAdminForm
-    list_display = ('title',)
+class PriceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'url', 'is_active')
+    fields = ('title', 'is_active', 'url', 'category')
 
 
 admin.site.register(CategoryBlock, CategoryBlockAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Product, ProductAdmin)
+admin.site.register(Price, PriceAdmin)
 
 admin.site.unregister(User)
 admin.site.unregister(Group)

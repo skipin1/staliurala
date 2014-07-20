@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.forms import ModelForm, ModelMultipleChoiceField, CheckboxSelectMultiple
-from .models import CategoryBlock, MoveType, Category, Product
+from .models import CategoryBlock, MoveType, Category
 from .validators import validate_move_types
 from django.utils.safestring import mark_safe
 from django.contrib.admin.widgets import AdminFileWidget
@@ -20,7 +20,7 @@ class AdminFileWidgetWithPreview(AdminFileWidget):
 
 class CategoryBlockAdminForm(ModelForm):
     move_type = ModelMultipleChoiceField(
-        label=u'Увеличение блока',
+        label=u'Анимация блока',
         widget = CheckboxSelectMultiple,
         queryset=MoveType.objects.all(),
         validators=[validate_move_types],
@@ -41,14 +41,6 @@ class CategoryBlockAdminForm(ModelForm):
 class CategoryAdminForm(ModelForm):
     class Meta:
         model = Category
-        widgets = {
-            'image': AdminFileWidgetWithPreview(),
-        }
-
-
-class ProductAdminForm(ModelForm):
-    class Meta:
-        model = Product
         widgets = {
             'image': AdminFileWidgetWithPreview(),
         }

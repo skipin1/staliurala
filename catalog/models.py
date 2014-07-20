@@ -7,7 +7,7 @@ from model_utils.models import TimeStampedModel
 
 class CommonFields(TimeStampedModel):
     title = models.CharField(u'Название', max_length=500)
-    description = models.TextField(u'Описание')
+    description = models.TextField(u'Описание', blank=True)
     is_active = models.BooleanField(u'Активный', default=True)
 
     def __unicode__(self):
@@ -47,7 +47,7 @@ class CategoryBlock(CommonFields):
 
 
 class Category(CommonFields):
-    block = models.ForeignKey(CategoryBlock, verbose_name=u'Блок')
+    block = models.ForeignKey(CategoryBlock, verbose_name=u'Блок', related_name='categories')
     image = models.ImageField(u'Картинка', upload_to='catalog/category/', blank=True)
 
     class Meta():
@@ -55,13 +55,10 @@ class Category(CommonFields):
         verbose_name_plural = u'Категории'
 
 
-class Product(CommonFields):
-    category = models.ForeignKey(Category, verbose_name=u'Категория')
-    image = models.ImageField(u'Картинка', upload_to='catalog/product/', blank=True)
-    slug = AutoSlugField(populate_from='title')
-    price_url = models.URLField('URL для прайс-документа', max_length=500)
+class Price(CommonFields):
+    category = models.ForeignKey(Category, related_name='prices')
+    url = models.CharField('URL', max_length=500)
 
     class Meta():
-        verbose_name = u'Продукт'
-        verbose_name_plural = u'Продукты'
-        unique_together = ('title', 'category')
+        verbose_name = u'Прайс'
+        verbose_name_plural = u'Прайсы'
