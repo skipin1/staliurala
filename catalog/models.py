@@ -41,27 +41,27 @@ class CategoryBlock(CommonFields):
     form_type = models.CharField(u'Форма блока', max_length=13, choices=FORM_CHOICES, default='simple')
     move_type = models.ManyToManyField(MoveType)
 
-    class Meta(CommonFields.Meta):
+    class Meta():
         verbose_name = u'Блок'
         verbose_name_plural = u'Блоки'
 
 
 class Category(CommonFields):
     block = models.ForeignKey(CategoryBlock, verbose_name=u'Блок')
-    image = models.ImageField(u'Картинка', upload_to='catalog/category/')
+    image = models.ImageField(u'Картинка', upload_to='catalog/category/', blank=True)
 
-    class Meta(CommonFields.Meta):
+    class Meta():
         verbose_name = u'Категория'
         verbose_name_plural = u'Категории'
 
 
 class Product(CommonFields):
     category = models.ForeignKey(Category, verbose_name=u'Категория')
-    image = models.ImageField(u'Картинка', upload_to='catalog/product/')
+    image = models.ImageField(u'Картинка', upload_to='catalog/product/', blank=True)
     slug = AutoSlugField(populate_from='title')
     price_url = models.URLField('URL для прайс-документа', max_length=500)
 
-    class Meta(CommonFields.Meta):
+    class Meta():
         verbose_name = u'Продукт'
         verbose_name_plural = u'Продукты'
         unique_together = ('title', 'category')
