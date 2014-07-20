@@ -162,7 +162,8 @@
             "image": "",
             "created": "2014-07-20T08:02:45.593Z",
             "is_active": true,
-            "modified": "2014-07-20T08:02:45.778Z",
+            "modified": "2014-07-20T10:28:07.277Z",
+            "slug": "truba-gd",
             "block": 1
         }
     },
@@ -175,7 +176,8 @@
             "image": "",
             "created": "2014-07-20T08:02:55.036Z",
             "is_active": true,
-            "modified": "2014-07-20T08:02:55.049Z",
+            "modified": "2014-07-20T10:28:07.493Z",
+            "slug": "truba-hd",
             "block": 1
         }
     },
@@ -188,7 +190,8 @@
             "image": "",
             "created": "2014-07-20T08:03:05.456Z",
             "is_active": true,
-            "modified": "2014-07-20T08:03:05.468Z",
+            "modified": "2014-07-20T10:28:07.501Z",
+            "slug": "truba-kotelnaya",
             "block": 1
         }
     },
@@ -201,7 +204,8 @@
             "image": "",
             "created": "2014-07-20T08:03:15.462Z",
             "is_active": true,
-            "modified": "2014-07-20T08:03:15.474Z",
+            "modified": "2014-07-20T10:28:07.507Z",
+            "slug": "trubyi-elektrosvarnyie",
             "block": 1
         }
     },
@@ -214,7 +218,8 @@
             "image": "",
             "created": "2014-07-20T08:03:24.720Z",
             "is_active": true,
-            "modified": "2014-07-20T08:03:24.732Z",
+            "modified": "2014-07-20T10:28:07.513Z",
+            "slug": "truboprovodnaya-armatura",
             "block": 1
         }
     },
@@ -227,7 +232,8 @@
             "image": "",
             "created": "2014-07-20T08:05:04.819Z",
             "is_active": true,
-            "modified": "2014-07-20T08:05:04.833Z",
+            "modified": "2014-07-20T10:28:07.518Z",
+            "slug": "list-gk",
             "block": 3
         }
     },
@@ -240,7 +246,8 @@
             "image": "",
             "created": "2014-07-20T08:05:21.417Z",
             "is_active": true,
-            "modified": "2014-07-20T08:05:21.429Z",
+            "modified": "2014-07-20T10:28:07.523Z",
+            "slug": "list-hk",
             "block": 3
         }
     },
@@ -253,7 +260,8 @@
             "image": "",
             "created": "2014-07-20T08:05:28.831Z",
             "is_active": true,
-            "modified": "2014-07-20T08:05:28.843Z",
+            "modified": "2014-07-20T10:28:07.528Z",
+            "slug": "pvl-riflenyij-list",
             "block": 3
         }
     },
@@ -266,7 +274,8 @@
             "image": "",
             "created": "2014-07-20T08:05:37.618Z",
             "is_active": true,
-            "modified": "2014-07-20T08:05:37.635Z",
+            "modified": "2014-07-20T10:28:07.534Z",
+            "slug": "otsinkovannyij-list",
             "block": 3
         }
     },
@@ -279,7 +288,8 @@
             "image": "",
             "created": "2014-07-20T08:05:56.410Z",
             "is_active": true,
-            "modified": "2014-07-20T08:05:56.422Z",
+            "modified": "2014-07-20T10:28:07.539Z",
+            "slug": "nerzhaveyuschie-trubyi",
             "block": 5
         }
     },
@@ -292,7 +302,8 @@
             "image": "",
             "created": "2014-07-20T08:06:08.375Z",
             "is_active": true,
-            "modified": "2014-07-20T08:06:08.387Z",
+            "modified": "2014-07-20T10:28:07.544Z",
+            "slug": "nerzhaveyuschij-list",
             "block": 5
         }
     },
@@ -305,7 +316,8 @@
             "image": "",
             "created": "2014-07-20T08:06:21.097Z",
             "is_active": true,
-            "modified": "2014-07-20T08:06:21.110Z",
+            "modified": "2014-07-20T10:28:07.549Z",
+            "slug": "sortovoj-nerzhaveyuschij-prokat",
             "block": 5
         }
     },
@@ -318,7 +330,8 @@
             "image": "",
             "created": "2014-07-20T08:06:34.462Z",
             "is_active": true,
-            "modified": "2014-07-20T08:06:34.475Z",
+            "modified": "2014-07-20T10:28:07.554Z",
+            "slug": "balka",
             "block": 7
         }
     },
@@ -331,7 +344,8 @@
             "image": "",
             "created": "2014-07-20T08:06:46.367Z",
             "is_active": true,
-            "modified": "2014-07-20T08:06:46.379Z",
+            "modified": "2014-07-20T10:28:07.559Z",
+            "slug": "balka-svarnaya",
             "block": 7
         }
     },
@@ -344,7 +358,8 @@
             "image": "",
             "created": "2014-07-20T08:06:57.418Z",
             "is_active": true,
-            "modified": "2014-07-20T08:06:57.430Z",
+            "modified": "2014-07-20T10:28:07.564Z",
+            "slug": "shveller",
             "block": 7
         }
     },
@@ -357,7 +372,8 @@
             "image": "",
             "created": "2014-07-20T08:07:08.136Z",
             "is_active": true,
-            "modified": "2014-07-20T08:07:08.148Z",
+            "modified": "2014-07-20T10:28:07.571Z",
+            "slug": "krug",
             "block": 7
         }
     },
@@ -370,7 +386,8 @@
             "image": "",
             "created": "2014-07-20T08:07:17.520Z",
             "is_active": true,
-            "modified": "2014-07-20T08:07:17.532Z",
+            "modified": "2014-07-20T10:28:07.576Z",
+            "slug": "ugolok",
             "block": 7
         }
     },
@@ -383,7 +400,8 @@
             "image": "",
             "created": "2014-07-20T08:07:29.512Z",
             "is_active": true,
-            "modified": "2014-07-20T08:07:29.524Z",
+            "modified": "2014-07-20T10:28:07.582Z",
+            "slug": "shestigrannik",
             "block": 7
         }
     },
@@ -396,7 +414,8 @@
             "image": "",
             "created": "2014-07-20T08:08:00.592Z",
             "is_active": true,
-            "modified": "2014-07-20T08:08:00.606Z",
+            "modified": "2014-07-20T10:28:07.587Z",
+            "slug": "konstruktsionnaya-stal",
             "block": 2
         }
     },
@@ -409,7 +428,8 @@
             "image": "",
             "created": "2014-07-20T08:08:27.526Z",
             "is_active": true,
-            "modified": "2014-07-20T08:08:27.538Z",
+            "modified": "2014-07-20T10:28:07.593Z",
+            "slug": "mednyie-anodyi",
             "block": 9
         }
     },
@@ -422,7 +442,8 @@
             "image": "",
             "created": "2014-07-20T08:08:40.935Z",
             "is_active": true,
-            "modified": "2014-07-20T08:08:40.947Z",
+            "modified": "2014-07-20T10:28:07.598Z",
+            "slug": "mednyie-trubyi",
             "block": 9
         }
     },
@@ -435,7 +456,8 @@
             "image": "",
             "created": "2014-07-20T08:08:54.538Z",
             "is_active": true,
-            "modified": "2014-07-20T08:08:54.551Z",
+            "modified": "2014-07-20T10:28:07.604Z",
+            "slug": "bronzovyij-prokat",
             "block": 9
         }
     },
@@ -448,7 +470,8 @@
             "image": "",
             "created": "2014-07-20T08:09:03.486Z",
             "is_active": true,
-            "modified": "2014-07-20T08:09:03.498Z",
+            "modified": "2014-07-20T10:28:07.609Z",
+            "slug": "lentyi-mednyie",
             "block": 9
         }
     },
@@ -461,7 +484,8 @@
             "image": "",
             "created": "2014-07-20T08:09:13.507Z",
             "is_active": true,
-            "modified": "2014-07-20T08:09:13.520Z",
+            "modified": "2014-07-20T10:28:07.614Z",
+            "slug": "lentyi-latunnyie",
             "block": 9
         }
     },
@@ -474,7 +498,8 @@
             "image": "",
             "created": "2014-07-20T08:09:27.216Z",
             "is_active": true,
-            "modified": "2014-07-20T08:09:27.228Z",
+            "modified": "2014-07-20T10:28:07.620Z",
+            "slug": "latunnyij-listyi-polosyi-plityi",
             "block": 9
         }
     },
@@ -487,7 +512,8 @@
             "image": "",
             "created": "2014-07-20T08:09:36.958Z",
             "is_active": true,
-            "modified": "2014-07-20T08:09:36.969Z",
+            "modified": "2014-07-20T10:28:07.625Z",
+            "slug": "mednyie-listyi-polosyi-plityi",
             "block": 9
         }
     },
@@ -500,7 +526,8 @@
             "image": "",
             "created": "2014-07-20T08:09:47.881Z",
             "is_active": true,
-            "modified": "2014-07-20T08:09:47.893Z",
+            "modified": "2014-07-20T10:28:07.631Z",
+            "slug": "medno-nikelevyij-i-nikelevyij-prokat",
             "block": 9
         }
     }
