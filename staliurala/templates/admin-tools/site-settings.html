@@ -1,0 +1,18 @@
+{% load i18n %}
+{% if not module.is_empty %}
+    <div id="module_{{ module.id }}" class="{{ module.render_css_classes }}" xmlns="http://www.w3.org/1999/html">
+        {% if module.show_title and module.title %}<h2>{% if module.title_url %}<a href="{{ module.title_url }}">{% trans module.title %}</a>{% else %}{% trans module.title %}{% endif %}</h2>{% endif %}
+        <div class="dashboard-module-content">
+            {% spaceless %}
+                <ul class="site-settings">
+                    <li>
+                        <div style="float: left;">
+                            <a href="/admin/site_settings/sitesetting/1/"><img  src="/static/admin-tools/img/settings.png"/></a>
+                            <a href="/admin/site_settings/sitesetting/1/">Настройки сайта</a>
+                        </div>
+                    </li>
+                </ul>
+            {% endspaceless %}
+        </div>
+    </div>
+{% endif %}

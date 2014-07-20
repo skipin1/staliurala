@@ -1,0 +1,36 @@
+{% load i18n %}
+{% if not module.is_empty %}
+    <div id="module_{{ module.id }}" class="{{ module.render_css_classes }}" xmlns="http://www.w3.org/1999/html">
+        {% if module.show_title and module.title %}<h2>{% if module.title_url %}<a href="{{ module.title_url }}">{% trans module.title %}</a>{% else %}{% trans module.title %}{% endif %}</h2>{% endif %}
+        <div class="dashboard-module-content">
+            {% spaceless %}
+                <ul class="site-content">
+                    <li>
+                        <div style="float: left;">
+                            <a href="/admin/partners/partner/"><img  src="/static/admin-tools/img/partners.png"/></a>
+                            <a href="/admin/partners/partner/">Партнеры</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;">
+                            <a href="/admin/catalog/categoryblock/"><img  src="/static/admin-tools/img/blocks.png"/></a>
+                            <a href="/admin/catalog/categoryblock/">Блоки на главной</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;">
+                            <a href="/admin/catalog/category/"><img  src="/static/admin-tools/img/categories.png"/></a>
+                            <a href="/admin/catalog/category/">Категории</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="float: left;">
+                            <a href="/admin/catalog/product/"><img  src="/static/admin-tools/img/products.png"/></a>
+                            <a href="/admin/catalog/product/">Товары</a>
+                        </div>
+                    </li>
+                </ul>
+            {% endspaceless %}
+        </div>
+    </div>
+{% endif %}
