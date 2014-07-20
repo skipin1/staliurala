@@ -4,8 +4,9 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    url(r'^catalog', include('catalog.urls'), name='catalog'),
+urlpatterns = patterns('catalog.views',
+    url(r'^$', 'home'),
+    url(r'^catalog', include('catalog.urls', namespace='catalog')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin_tools/', include('admin_tools.urls')),
 )
