@@ -10,4 +10,13 @@
 
 {% block content %}
     <h1>Category page</h1>
+    <h2>{{ category.title }}</h2>
+
+    <h4>Прайсы</h4>
+    <ul>
+        {% for price in category.prices.all %}
+            <a href="{% url 'catalog:price' price.pk %}">{{ price.title }}</a>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
