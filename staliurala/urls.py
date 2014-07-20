@@ -9,7 +9,7 @@ from catalog.views import HomeView
 
 urlpatterns = patterns('catalog.views',
     url(r'^$', HomeView.as_view()),
-    url(r'^catalog', include('catalog.urls', namespace='catalog')),
+    url(r'^catalog/', include('catalog.urls', namespace='catalog')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin_tools/', include('admin_tools.urls')),
 )

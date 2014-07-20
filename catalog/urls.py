@@ -1,9 +1,7 @@
 from django.conf.urls import patterns, url
-from .views import EasyPDF
+from .views import EasyPDF, CategoryDetailView
 
 
 urlpatterns = patterns('catalog.views',
-    url(r'category/(?P<slug>[a-zA-Z0-9\-]+)/$', 'some_view'),
-    url(r'product/(?P<slug>[a-zA-Z0-9\-]+)/$', 'some_view'),
-    url(r'product/(?P<slug>[a-zA-Z0-9\-]+)/price/$', 'some_view'),
+    url(r'category/(?P<slug>[a-zA-Z0-9\-]+)/$', CategoryDetailView.as_view(), name='category'),
 )
