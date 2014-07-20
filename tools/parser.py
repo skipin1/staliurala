@@ -11,9 +11,6 @@ browser_dict = {
 
 class Parser():
 
-    def test(self, text):
-        print text
-
     def get_html(self, url):
         request = urllib2.Request(url)
         request.add_header('User-Agent', browser_dict['chromium'])
