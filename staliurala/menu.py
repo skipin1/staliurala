@@ -1,10 +1,4 @@
-"""
-This file was generated with the custommenu management command, it contains
-the classes for the admin menu, you can customize this class as you want.
-
-To activate your custom menu add the following to your settings.py::
-    ADMIN_TOOLS_MENU = 'staliurala.menu.CustomMenu'
-"""
+# -*- coding: utf-8 -*-
 
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -20,15 +14,20 @@ class CustomMenu(Menu):
         Menu.__init__(self, **kwargs)
         self.children += [
             items.MenuItem(_('Dashboard'), reverse('admin:index')),
-            items.Bookmarks(),
-            items.AppList(
-                _('Applications'),
-                exclude=('django.contrib.*',)
+            items.MenuItem(_(u'Настройки'), '/admin/catalog/',
+                children=[
+                    items.MenuItem(u'Настройки сайта', '/admin/site_settings/sitesetting/1/')
+                ]
             ),
-            items.AppList(
-                _('Administration'),
-                models=('django.contrib.*',)
-            )
+            items.MenuItem(_(u'Контент'),
+                children=[
+                    items.MenuItem(u'Партнеры', '/admin/partners/partner/'),
+                    items.MenuItem(u'Блоки', '/admin/catalog/categoryblock/'),
+                    items.MenuItem(u'Категории', '/admin/catalog/category/'),
+                    items.MenuItem(u'Товары', '/admin/catalog/product/'),
+                ]
+            ),
+
         ]
 
     def init_with_context(self, context):
