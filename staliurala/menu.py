@@ -14,7 +14,7 @@ class CustomMenu(Menu):
         Menu.__init__(self, **kwargs)
         self.children += [
             items.MenuItem(_('Dashboard'), reverse('admin:index')),
-            items.MenuItem(_(u'Настройки'), '/admin/catalog/',
+            items.MenuItem(_(u'Настройки'), '/admin/site_settings/',
                 children=[
                     items.MenuItem(u'Настройки сайта', '/admin/site_settings/sitesetting/1/')
                 ]
@@ -22,9 +22,9 @@ class CustomMenu(Menu):
             items.MenuItem(_(u'Контент'),
                 children=[
                     items.MenuItem(u'Партнеры', '/admin/partners/partner/'),
-                    items.MenuItem(u'Блоки', '/admin/catalog/categoryblock/'),
+                    items.MenuItem(u'Блоки на главной', '/admin/catalog/categoryblock/'),
                     items.MenuItem(u'Категории', '/admin/catalog/category/'),
-                    items.MenuItem(u'Товары', '/admin/catalog/product/'),
+                    items.MenuItem(u'Прайсы', '/admin/catalog/price/'),
                 ]
             ),
 
