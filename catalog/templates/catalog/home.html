@@ -9,5 +9,18 @@
 {% endblock %}
 
 {% block content %}
-    <h1>dududdudu</h1>
+    <h1>Home page</h1>
+    <h2></h2>
+    <ul>
+        {% for block in block_list %}
+            <li>
+                {{ block.title }}
+                <ul>
+                    {% for category in block.categories.all %}
+                        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
