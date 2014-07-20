@@ -1,0 +1,12 @@
+ul.site-settings, ul.site-content {
+    overflow: auto;
+}
+
+ul.site-settings li a img,
+ul.site-content li a img {
+    display: block; margin: auto;
+}
+
+ul.site-content li {
+    display: inline-block;
+}
