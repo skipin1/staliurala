@@ -3,9 +3,26 @@
 <head lang="ru">
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <style>
+        @font-face {
+            font-family: DejaMono;
+            src: url('/usr/share/fonts/TTF/DejaVuSansMono.ttf');
+        }
+        * {
+            font-family: DejaMono !important;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 3px 5px 0;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h6>{{ title }}</h6>
     {{ table|safe }}
 </body>
 </html>

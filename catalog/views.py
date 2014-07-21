@@ -2,7 +2,7 @@
 
 from .models import CategoryBlock, Category, Price
 from django.views.generic import TemplateView, DetailView
-from easy_pdf.views import PDFTemplateView
+# from easy_pdf.views import PDFTemplateView
 from tools.parser import Parser
 
 
@@ -20,20 +20,39 @@ class CategoryDetailView(DetailView):
     model = Category
 
 
-class EasyPDF(PDFTemplateView):
+
+from django.http import HttpResponse, Http404
+from xhtml2pdf import pisa
+
+
+class PDFTemplateView(TemplateView):
     template_name = 'price_template.html'
-    pdf_filename = 'dudu.pdf'
+    pdf_file_name = ''
 
     def get_context_data(self, **kwargs):
-        context = super(EasyPDF, self).get_context_data(
-            # pagesize="A4",
-            # title="Hi there 22222",
-            **kwargs
-        )
-
-        context['table'] = self.get_table()
+        context = super(PDFTemplateView, self).get_context_data(**kwargs)
         context['title'] = self.price_obj.title
+        context['table'] = str(self.get_table())
         return context
+
+    def render_to_response(self, context, **response_kwargs):
+        template_response = super(PDFTemplateView, self).render_to_response(context, **response_kwargs)
+        html = str(template_response.render())
+
+        response = HttpResponse(content_type='application/pdf', mimetype='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="%s"' % self.pdf_file_name
+        response['Content-Type'] = 'application/pdf'
+
+        try:
+            pisaStatus = pisa.CreatePDF(
+                src = html,
+                dest=response,
+                encoding='utf-8',
+            )
+        except:
+            raise Http404
+
+        return response
 
     def get_table(self):
         p = Parser()
@@ -46,4 +65,4 @@ class EasyPDF(PDFTemplateView):
     def get(self, request, *args, **kwargs):
         self.price_obj = Price.objects.get(pk=kwargs['pk'])
         self.set_file_name()
-        return super(EasyPDF, self).get(request, *args, **kwargs)
+        return super(PDFTemplateView, self).get(request, *args, **kwargs)
