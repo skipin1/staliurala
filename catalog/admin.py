@@ -4,9 +4,11 @@ from django.contrib import admin
 from .models import CategoryBlock, Category, Price
 from .forms import CategoryBlockAdminForm, CategoryAdminForm
 from django.contrib.auth.models import User, Group
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class CategoryBlockAdmin(admin.ModelAdmin):
+
+class CategoryBlockAdmin(SummernoteModelAdmin):
     form = CategoryBlockAdminForm
     list_display = ('title', 'form_type', 'move_list', 'is_active')
     list_filter = ('is_active', 'form_type')
@@ -28,7 +30,7 @@ class PriceInline(admin.TabularInline):
     fields = ('title', 'url', 'is_active')
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(SummernoteModelAdmin):
     form = CategoryAdminForm
     list_display = ('title', 'block', 'is_active')
     ordering = ('title',)

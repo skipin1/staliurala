@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Partner
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class PartnerAdmin(admin.ModelAdmin):
+class PartnerAdmin(SummernoteModelAdmin):
     list_display = ('logo', 'title')
 
 

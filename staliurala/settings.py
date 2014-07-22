@@ -40,6 +40,7 @@ THIRD_PARTY_ADMIN_APPS = (
 
 THIRD_PARTY_APPS = (
     'django_cleanup',
+    'django_summernote',
 )
 
 USER_APPS = (
@@ -149,3 +150,13 @@ if DEBUG:
         'debug_toolbar.panels.logging.LoggingPanel',
         'debug_toolbar.panels.redirects.RedirectsPanel',
     ]
+
+
+# SUMMERNOTE SETTINGS
+SUMMERNOTE_CONFIG = {
+    'styleWithTags': True,
+    'lang': 'ru-RU',
+    'width': '1014',
+    'height': '480',
+    'airMode': 'True',
+}
