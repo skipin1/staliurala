@@ -6,6 +6,9 @@ django-model-utils
 pillow
 pytils
 xhtml2pdf
+reportlab
+pypdf2
+html5lib
 #django-debug-toolbar
 #ipython
 -e hg+https://hg@bitbucket.org/izi/django-admin-tools#egg=django-admin-tools
