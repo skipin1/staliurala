@@ -10,6 +10,7 @@ class CategoryBlockAdmin(admin.ModelAdmin):
     form = CategoryBlockAdminForm
     list_display = ('title', 'form_type', 'move_list', 'is_active')
     list_filter = ('is_active', 'form_type')
+    fields = ('title', 'is_active', 'image', 'description', 'form_type', 'move_type',)
     # search_fields = ('title',)
 
     def move_list(self, obj):
@@ -32,6 +33,14 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'block', 'is_active')
     ordering = ('title',)
     list_filter = ('is_active', 'block')
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'is_active', 'block', 'image', 'description')
+        }),
+        ('SEO параметры', {
+            'fields': ('seo_title', 'seo_keywords', 'seo_description')
+        }),
+    )
     # search_fields = ('title',)
 
     inlines = [

@@ -52,6 +52,10 @@ class Category(CommonFields):
     image = models.ImageField(u'Картинка', upload_to='catalog/category/', blank=True)
     slug = AutoSlugField(populate_from='title')
 
+    seo_title = models.CharField('Title', max_length=80, blank=True)
+    seo_keywords = models.CharField('Keywords', max_length=250, blank=True)
+    seo_description = models.CharField('Description', max_length=200, blank=True)
+
     def get_absolute_url(self):
         return reverse('catalog:category', args=[self.slug])
 
