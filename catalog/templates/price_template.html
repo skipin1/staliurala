@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+{% load price_template_tags %}
 <html>
 <head lang="ru">
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>Dudud</title>
     <style>
         @font-face {
             font-family: DejaMono;
-            src: url('/usr/share/fonts/TTF/DejaVuSansMono.ttf');
+            src: url('{% get_font_path %}');
         }
         * {
             font-family: DejaMono !important;
@@ -23,6 +22,7 @@
     </style>
 </head>
 <body>
+    <h4>{{ title }}</h4>
     {{ table|safe }}
 </body>
 </html>

@@ -39,7 +39,8 @@ class PDFTemplateView(TemplateView):
         template_response = super(PDFTemplateView, self).render_to_response(context, **response_kwargs)
         html = str(template_response.render())
 
-        response = HttpResponse(content_type='application/pdf', mimetype='application/pdf')
+        response = HttpResponse(mimetype='application/pdf')
+        # response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename="%s"' % self.pdf_file_name
         response['Content-Type'] = 'application/pdf'
 
@@ -59,7 +60,7 @@ class PDFTemplateView(TemplateView):
         return p.get_table(self.price_obj.url)
 
     def set_file_name(self):
-        self.pdf_filename = u'price-%s.pdf' % self.price_obj.pk
+        self.pdf_file_name = u'price-%s.pdf' % self.price_obj.pk
 
 
     def get(self, request, *args, **kwargs):
